@@ -18,6 +18,7 @@ gdjs.mainMenuSceneCode.conditionTrue_0 = {val:false};
 gdjs.mainMenuSceneCode.condition0IsTrue_0 = {val:false};
 gdjs.mainMenuSceneCode.condition1IsTrue_0 = {val:false};
 gdjs.mainMenuSceneCode.condition2IsTrue_0 = {val:false};
+gdjs.mainMenuSceneCode.condition3IsTrue_0 = {val:false};
 
 
 gdjs.mainMenuSceneCode.mapOfGDgdjs_46mainMenuSceneCode_46GDEmailInputObjects1Objects = Hashtable.newFrom({"EmailInput": gdjs.mainMenuSceneCode.GDEmailInputObjects1});gdjs.mainMenuSceneCode.mapOfGDgdjs_46mainMenuSceneCode_46GDEmailEntryTextObjects1Objects = Hashtable.newFrom({"EmailEntryText": gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1});gdjs.mainMenuSceneCode.mapOfGDgdjs_46mainMenuSceneCode_46GDEmailInputObjects1Objects = Hashtable.newFrom({"EmailInput": gdjs.mainMenuSceneCode.GDEmailInputObjects1});gdjs.mainMenuSceneCode.mapOfGDgdjs_46mainMenuSceneCode_46GDEmailEntryTextObjects1Objects = Hashtable.newFrom({"EmailEntryText": gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1});gdjs.mainMenuSceneCode.mapOfGDgdjs_46mainMenuSceneCode_46GDStartButtonObjects1Objects = Hashtable.newFrom({"StartButton": gdjs.mainMenuSceneCode.GDStartButtonObjects1});gdjs.mainMenuSceneCode.eventsList0x5b6e18 = function(runtimeScene) {
@@ -147,6 +148,7 @@ gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjec
 
 gdjs.mainMenuSceneCode.condition0IsTrue_0.val = false;
 gdjs.mainMenuSceneCode.condition1IsTrue_0.val = false;
+gdjs.mainMenuSceneCode.condition2IsTrue_0.val = false;
 {
 for(var i = 0, k = 0, l = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length;i<l;++i) {
     if ( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i].behaviorActivated("TextEntryVirtualKeyboard") ) {
@@ -158,10 +160,45 @@ for(var i = 0, k = 0, l = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length
 gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length = k;}if ( gdjs.mainMenuSceneCode.condition0IsTrue_0.val ) {
 {
 gdjs.mainMenuSceneCode.condition1IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) == 1;
+}if ( gdjs.mainMenuSceneCode.condition1IsTrue_0.val ) {
+{
+gdjs.mainMenuSceneCode.condition2IsTrue_0.val = gdjs.evtTools.systemInfo.isMobile();
 }}
-if (gdjs.mainMenuSceneCode.condition1IsTrue_0.val) {
+}
+if (gdjs.mainMenuSceneCode.condition2IsTrue_0.val) {
 /* Reuse gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1 */
 {runtimeScene.getVariables().getFromIndex(3).concatenate((( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[0].getString()));
+}}
+
+}
+
+
+{
+
+gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjects("EmailEntryText"));
+
+gdjs.mainMenuSceneCode.condition0IsTrue_0.val = false;
+gdjs.mainMenuSceneCode.condition1IsTrue_0.val = false;
+gdjs.mainMenuSceneCode.condition2IsTrue_0.val = false;
+{
+for(var i = 0, k = 0, l = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length;i<l;++i) {
+    if ( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i].behaviorActivated("TextEntryVirtualKeyboard") ) {
+        gdjs.mainMenuSceneCode.condition0IsTrue_0.val = true;
+        gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[k] = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i];
+        ++k;
+    }
+}
+gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length = k;}if ( gdjs.mainMenuSceneCode.condition0IsTrue_0.val ) {
+{
+gdjs.mainMenuSceneCode.condition1IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) == 1;
+}if ( gdjs.mainMenuSceneCode.condition1IsTrue_0.val ) {
+{
+gdjs.mainMenuSceneCode.condition2IsTrue_0.val = !(gdjs.evtTools.systemInfo.isMobile());
+}}
+}
+if (gdjs.mainMenuSceneCode.condition2IsTrue_0.val) {
+/* Reuse gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1 */
+{runtimeScene.getVariables().getFromIndex(3).setString((( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[0].getString()));
 }}
 
 }
