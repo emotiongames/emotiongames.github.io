@@ -37,6 +37,7 @@ gdjs.mainMenuSceneCode.GDErrorMessageObjects1.createFrom(runtimeScene.getObjects
 }{for(var i = 0, len = gdjs.mainMenuSceneCode.GDErrorMessageObjects1.length ;i < len;++i) {
     gdjs.mainMenuSceneCode.GDErrorMessageObjects1[i].hide();
 }
+}{runtimeScene.getVariables().getFromIndex(3).setString("");
 }}
 
 }
@@ -57,6 +58,7 @@ gdjs.mainMenuSceneCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButto
 if (gdjs.mainMenuSceneCode.condition1IsTrue_0.val) {
 gdjs.mainMenuSceneCode.GDCursorTextBoxObjects1.createFrom(runtimeScene.getObjects("CursorTextBox"));
 gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjects("EmailEntryText"));
+gdjs.mainMenuSceneCode.GDEmailTextObjects1.createFrom(runtimeScene.getObjects("EmailText"));
 {for(var i = 0, len = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length ;i < len;++i) {
     gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i].activate(true);
 }
@@ -65,6 +67,10 @@ gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjec
     gdjs.mainMenuSceneCode.GDCursorTextBoxObjects1[i].hide(false);
 }
 }{runtimeScene.getVariables().getFromIndex(1).setNumber(1);
+}{for(var i = 0, len = gdjs.mainMenuSceneCode.GDEmailTextObjects1.length ;i < len;++i) {
+    gdjs.mainMenuSceneCode.GDEmailTextObjects1[i].setString("");
+}
+}{runtimeScene.getVariables().getFromIndex(3).setString("");
 }}
 
 }
@@ -100,21 +106,35 @@ gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjec
 
 {
 
-gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjects("EmailEntryText"));
 
 gdjs.mainMenuSceneCode.condition0IsTrue_0.val = false;
+gdjs.mainMenuSceneCode.condition1IsTrue_0.val = false;
 {
-for(var i = 0, k = 0, l = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length;i<l;++i) {
-    if ( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i].getString() == "" ) {
-        gdjs.mainMenuSceneCode.condition0IsTrue_0.val = true;
-        gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[k] = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i];
-        ++k;
-    }
-}
-gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length = k;}if (gdjs.mainMenuSceneCode.condition0IsTrue_0.val) {
+gdjs.mainMenuSceneCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().getFromIndex(3)) == "";
+}if ( gdjs.mainMenuSceneCode.condition0IsTrue_0.val ) {
+{
+gdjs.mainMenuSceneCode.condition1IsTrue_0.val = gdjs.evtTools.common.getVariableNumber(runtimeScene.getVariables().getFromIndex(1)) == 0;
+}}
+if (gdjs.mainMenuSceneCode.condition1IsTrue_0.val) {
 gdjs.mainMenuSceneCode.GDEmailTextObjects1.createFrom(runtimeScene.getObjects("EmailText"));
 {for(var i = 0, len = gdjs.mainMenuSceneCode.GDEmailTextObjects1.length ;i < len;++i) {
     gdjs.mainMenuSceneCode.GDEmailTextObjects1[i].setString("Tester e-mail");
+}
+}}
+
+}
+
+
+{
+
+
+gdjs.mainMenuSceneCode.condition0IsTrue_0.val = false;
+{
+gdjs.mainMenuSceneCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().getFromIndex(3)) != "";
+}if (gdjs.mainMenuSceneCode.condition0IsTrue_0.val) {
+gdjs.mainMenuSceneCode.GDEmailTextObjects1.createFrom(runtimeScene.getObjects("EmailText"));
+{for(var i = 0, len = gdjs.mainMenuSceneCode.GDEmailTextObjects1.length ;i < len;++i) {
+    gdjs.mainMenuSceneCode.GDEmailTextObjects1[i].setString(gdjs.evtTools.common.getVariableString(runtimeScene.getVariables().getFromIndex(3)));
 }
 }}
 
@@ -141,10 +161,7 @@ gdjs.mainMenuSceneCode.condition1IsTrue_0.val = gdjs.evtTools.common.getVariable
 }}
 if (gdjs.mainMenuSceneCode.condition1IsTrue_0.val) {
 /* Reuse gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1 */
-gdjs.mainMenuSceneCode.GDEmailTextObjects1.createFrom(runtimeScene.getObjects("EmailText"));
-{for(var i = 0, len = gdjs.mainMenuSceneCode.GDEmailTextObjects1.length ;i < len;++i) {
-    gdjs.mainMenuSceneCode.GDEmailTextObjects1[i].setString((( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[0].getString()));
-}
+{runtimeScene.getVariables().getFromIndex(3).concatenate((( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[0].getString()));
 }}
 
 }
@@ -163,8 +180,8 @@ gdjs.mainMenuSceneCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObje
 gdjs.mainMenuSceneCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }}
 if (gdjs.mainMenuSceneCode.condition1IsTrue_0.val) {
-gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.createFrom(runtimeScene.getObjects("EmailEntryText"));
-{gdjs.evtTools.network.sendHttpRequest("https://api.backendless.com/2C4A95E1-350F-9088-FF00-61C030C97100/E736C626-131A-469C-B577-25EBEA7EA772", "/services/testers_api/exists?email='" + (( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[0].getString()) + "'", "", "GET", "application/json", runtimeScene.getVariables().getFromIndex(0));
+gdjs.mainMenuSceneCode.GDEmailTextObjects1.createFrom(runtimeScene.getObjects("EmailText"));
+{gdjs.evtTools.network.sendHttpRequest("https://api.backendless.com/2C4A95E1-350F-9088-FF00-61C030C97100/E736C626-131A-469C-B577-25EBEA7EA772", "/services/testers_api/exists?email='" + (( gdjs.mainMenuSceneCode.GDEmailTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailTextObjects1[0].getString()) + "'", "", "GET", "application/json", runtimeScene.getVariables().getFromIndex(0));
 }{runtimeScene.getVariables().getFromIndex(2).setNumber(1);
 }}
 

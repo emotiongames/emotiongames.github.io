@@ -7,7 +7,7 @@ gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.condition0IsTrue_0 = {val:f
 gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.condition1IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.userFunc0x1514c2c0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.userFunc0x1779d800 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 gdjs._extensionMobileKeyboard = gdjs._extensionMobileKeyboard || {};
 
@@ -15,17 +15,17 @@ if (gdjs._extensionMobileKeyboard.openKeyboard) {
     gdjs._extensionMobileKeyboard.openKeyboard(eventsFunctionContext);
 }
 };
-gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x15006164 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x1779d59c = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.userFunc0x1514c2c0(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.userFunc0x1779d800(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
 
-}; //End of gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x15006164
+}; //End of gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x1779d59c
 gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x5b7328 = function(runtimeScene, eventsFunctionContext) {
 
 {
@@ -37,7 +37,7 @@ gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.condition0IsTrue_0.val = gd
 }if (gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.condition0IsTrue_0.val) {
 
 { //Subevents
-gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x15006164(runtimeScene, eventsFunctionContext);} //End of subevents
+gdjs.evtsExt__TextEntryVirtualKeyboard__openKeyboard.eventsList0x1779d59c(runtimeScene, eventsFunctionContext);} //End of subevents
 }
 
 }

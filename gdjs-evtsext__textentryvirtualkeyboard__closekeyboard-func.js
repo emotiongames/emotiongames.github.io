@@ -7,7 +7,7 @@ gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.condition0IsTrue_0 = {val:
 gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.condition1IsTrue_0 = {val:false};
 
 
-gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.userFunc0x1514c710 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.userFunc0x1779ee80 = function(runtimeScene, eventsFunctionContext) {
 "use strict";
 gdjs._extensionMobileKeyboard = gdjs._extensionMobileKeyboard || {};
 
@@ -15,17 +15,17 @@ if (gdjs._extensionMobileKeyboard.closeKeyboard) {
     gdjs._extensionMobileKeyboard.closeKeyboard(eventsFunctionContext);
 }
 };
-gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x15005ecc = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x1779ec1c = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.userFunc0x1514c710(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.userFunc0x1779ee80(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 
 
-}; //End of gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x15005ecc
+}; //End of gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x1779ec1c
 gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x5b7328 = function(runtimeScene, eventsFunctionContext) {
 
 {
@@ -37,7 +37,7 @@ gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.condition0IsTrue_0.val = g
 }if (gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.condition0IsTrue_0.val) {
 
 { //Subevents
-gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x15005ecc(runtimeScene, eventsFunctionContext);} //End of subevents
+gdjs.evtsExt__TextEntryVirtualKeyboard__closeKeyboard.eventsList0x1779ec1c(runtimeScene, eventsFunctionContext);} //End of subevents
 }
 
 }
