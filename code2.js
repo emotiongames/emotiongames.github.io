@@ -168,6 +168,9 @@ gdjs.mainMenuSceneCode.condition2IsTrue_0.val = gdjs.evtTools.systemInfo.isMobil
 if (gdjs.mainMenuSceneCode.condition2IsTrue_0.val) {
 /* Reuse gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1 */
 {runtimeScene.getVariables().getFromIndex(3).concatenate((( gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length === 0 ) ? "" :gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[0].getString()));
+}{for(var i = 0, len = gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1.length ;i < len;++i) {
+    gdjs.mainMenuSceneCode.GDEmailEntryTextObjects1[i].setString("");
+}
 }}
 
 }
